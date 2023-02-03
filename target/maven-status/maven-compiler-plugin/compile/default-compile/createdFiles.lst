@@ -1,0 +1,6 @@
+org\myorg\http\HttpConnection.class
+org\myorg\factories\PageFactory.class
+org\myorg\pages\FormPage.class
+org\myorg\pages\SimplePage.class
+org\myorg\HttpServer.class
+org\myorg\pages\Page.class
