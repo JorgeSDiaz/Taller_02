@@ -1,4 +1,4 @@
-package org.myorg.http;
+package org.myorg.server.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;

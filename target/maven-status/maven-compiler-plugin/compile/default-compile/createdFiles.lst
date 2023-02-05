@@ -1,6 +1,9 @@
-org\myorg\http\HttpConnection.class
-org\myorg\factories\PageFactory.class
-org\myorg\pages\FormPage.class
-org\myorg\pages\SimplePage.class
-org\myorg\HttpServer.class
-org\myorg\pages\Page.class
+org\myorg\server\services\RESTService.class
+org\myorg\server\http\HttpServer.class
+org\myorg\webApps\FirstApp.class
+org\myorg\webApps\FirstApp$1.class
+org\myorg\server\pages\Page.class
+org\myorg\server\pages\FormPage.class
+org\myorg\webApps\HelloService.class
+org\myorg\server\http\HttpConnection.class
+org\myorg\server\pages\SimplePage.class

@@ -1,4 +1,4 @@
-package org.myorg.pages;
+package org.myorg.server.pages;
 
 /**
  * Test Page
