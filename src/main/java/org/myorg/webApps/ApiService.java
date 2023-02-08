@@ -1,15 +1,22 @@
-package org.myorg.server.pages;
+package org.myorg.webApps;
 
-/**
- * Page with form to make a query to an api
- */
-public class FormPage implements Page {
+import org.myorg.server.services.RESTService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ApiService implements RESTService {
     @Override
-    public String getContent() {
+    public List<String> getHeader() {
+        List<String> header = new ArrayList<>();
+        header.add("HTTP/1.1 200 OK");
+        header.add("Content-Type: text/html");
+        return header;
+    }
+
+    @Override
+    public String getResponse() {
         return """
-                HTTP/1.1 200 OK\r
-                Content-Type: text/html\r
-                \r
                 <!DOCTYPE html>
                 <html>
                   <head>
@@ -38,9 +45,9 @@ public class FormPage implements Page {
                   </head>
                   <body>
                     <h1>GET Movie by Title</h1>
-                    <form action="/json">
+                    <form action="json/api">
                       <label for="name">Title  </label>
-                      <input type="text" id="title" value="  indiana" /><br /><br />
+                      <input type="text" id="title" value="indiana" /><br /><br />
                       <input type="button" value="Submit" onclick="loadGetMsg()" />
                     </form>
                     <br>
@@ -48,7 +55,8 @@ public class FormPage implements Page {
                     <script type="text/javascript">
                       function loadGetMsg() {
                         let title = document.getElementById("title");
-                        let url = "json/?t=" + name.title;
+                        let url = "json/api/?t=" + title.value;
+                        console.log(url);
                         fetch(url, { method: "GET", mode:"no-cors"})
                           .then((x) => x.text())
                           .then((y) => (document.getElementById("getrespmsg").innerHTML = y));
@@ -56,7 +64,6 @@ public class FormPage implements Page {
                     </script>
                   </body>
                 </html>
-                                 """
-                ;
+                """;
     }
 }

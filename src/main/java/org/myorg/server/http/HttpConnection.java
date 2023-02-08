@@ -30,7 +30,7 @@ public class HttpConnection {
      * @throws IOException URL malformed
      */
     public String getData(String query) throws IOException {
-        URL queryUrl = new URL(api_key.equals("") ? url + query : url + query + "&" + api_key);
+        URL queryUrl = new URL(api_key.equals("") ? url + query : url  + query + "&" + api_key);
         HttpURLConnection queryConnection = (HttpURLConnection) queryUrl.openConnection();
 
         // Set-Up

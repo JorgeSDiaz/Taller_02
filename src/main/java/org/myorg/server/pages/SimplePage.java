@@ -7,9 +7,6 @@ public class SimplePage implements Page {
     @Override
     public String getContent() {
         return """
-                HTTP/1.1 200 OK\r
-                Content-Type: text/html\r
-                \r
                 <!DOCTYPE html>
                 <html>
                 <head>
