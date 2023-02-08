@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstApp {
+public class App {
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServer.getInstance();
         // Services : message: Json, hello: html, api: html-ccs-js -> json, pageTest: html-css-js

@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.myorg"},{"l":"org.myorg.factories"},{"l":"org.myorg.http"},{"l":"org.myorg.pages"}];updateSearchResults();

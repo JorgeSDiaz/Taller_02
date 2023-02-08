@@ -97,7 +97,7 @@ public class HttpServer {
             RESTService restService = this.services.get(serviceName);
             body = restService.getResponse();
         } else {
-            body = "Service not found";
+            body = "Service Available: " + services.keySet();
         }
 
         return body;
